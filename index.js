@@ -3,6 +3,7 @@
 function stringToNumber(str) {
   // Використовуємо Number() для перетворення рядка в число
   // Повертаємо отримане число
+  return Number(str);
 }
 
 console.log("Завдання 1 ====================================");
@@ -32,6 +33,7 @@ console.log(
 // Задача 4: Використовуючи результати Задачі 3, напишіть функцію, яка перевіряє, чи є число небезпечним цілим числом
 
 function isUnsafeInteger(num) {
+  return !isSafeInteger(num);
   // Використовуємо логічну оператор НЕ (!), щоб отримати протилежну відповідь від функції isSafeInteger()
 }
 
@@ -44,6 +46,7 @@ console.log(
 // Задача 5: Напишіть функцію, яка перевіряє, чи є число надто великим для представлення в JavaScript
 
 function isTooLarge(num) {
+  return num > Number.MAX_VALUE;
   // Перевіряємо, чи є число більшим за MAX_VALUE
 }
 
@@ -69,6 +72,7 @@ console.log("isAlmostZero(Number.MIN_VALUE)", isAlmostZero(Number.MIN_VALUE)); /
 // Задача 7: Напишіть функцію, яка перевіряє, чи є значення цілим числом
 
 function checkIsInteger(num) {
+  return Number.isInteger(num);
   // Використовуємо вбудовану функцію Number.isInteger(), щоб перевірити, чи є значення цілим числом
 }
 
@@ -78,6 +82,7 @@ console.log("checkIsInteger(42.5)", checkIsInteger(42.5)); // Виведе false
 // Задача 8: Напишіть функцію, яка перевіряє, чи є значення безпечним цілим числом
 
 function checkIsSafeInteger(num) {
+  return Number.isSafeInteger(num);
   // Використовуємо вбудовану функцію Number.isSafeInteger(), щоб перевірити, чи є значення безпечним цілим числом
 }
 
@@ -90,6 +95,7 @@ console.log(
 // Задача 9: Напишіть функцію, яка конвертує число в рядок з експоненційним представленням
 
 function convertToExponential(num) {
+  return num.toExponential();
   // Використовуємо метод toExponential(), щоб конвертувати число в рядок з експоненційним представленням
 }
 
@@ -99,6 +105,7 @@ console.log("convertToExponential(42)", convertToExponential(42)); // Вивед
 // Задача 10: Напишіть функцію, яка конвертує число в рядок з фіксованою кількістю знаків після коми
 
 function convertToFixed(num, precision) {
+  return num.toFixed(precision);
   // Використовуємо метод toFixed(), щоб конвертувати число в рядок з фіксованою кількістю знаків після коми
 }
 
@@ -108,6 +115,7 @@ console.log("convertToFixed(42.9876, 2)", convertToFixed(42.9876, 2)); // Вив
 // Задача 11: Напишіть функцію, яка конвертує число в рядок
 
 function convertToString(num) {
+  return num.toString();
   // Використовуємо метод toString(), щоб конвертувати число в рядок
 }
 
@@ -117,6 +125,7 @@ console.log("convertToString(42)", convertToString(42)); // Виведе "42"
 // Задача 12: Напишіть функцію, яка окргугляє число до вказаної довжини
 
 function convertToPrecision(num, precision) {
+  return num.toPrecision(precision);
   // Використовуємо метод toPrecision(), щоб округлити число до вказаної довжини
 }
 
