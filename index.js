@@ -12,6 +12,7 @@ console.log('stringToNumber("42")', stringToNumber("42")); // Виведе 42
 // Задача 2: Напишіть функцію, яка визначає, чи є два числа майже однаковими, використовуючи Number.EPSILON
 
 function isAlmostSame(num1, num2) {
+  return Math.abs(num1 - num2) <= Number.EPSILON;
   // Визначаємо, чи є різниця між двома числами меншою або рівною EPSILON
 }
 
@@ -21,6 +22,7 @@ console.log("isAlmostSame(0.1 + 0.2, 0.3)", isAlmostSame(0.1 + 0.2, 0.3)); // В
 // Задача 3: Напишіть функцію, яка перевіряє, чи є число безпечним цілим числом
 
 function isSafeInteger(num) {
+  return num <= Number.MAX_SAFE_INTEGER && num >= Number.MIN_SAFE_INTEGER;
   // Перевіряємо, чи є число меншим або рівним MAX_SAFE_INTEGER і більшим або рівним MIN_SAFE_INTEGER
 }
 
@@ -59,6 +61,7 @@ console.log(
 // Задача 6: Напишіть функцію, яка перевіряє, чи є число меншим чим  найменше можливе числове значення в JavaScript
 
 function isAlmostZero(num) {
+  return num > 0 && num < Number.MIN_VALUE;
   // Перевіряємо, чи є число більше 0, але все ще менше за Number.MIN_VALUE
 }
 
